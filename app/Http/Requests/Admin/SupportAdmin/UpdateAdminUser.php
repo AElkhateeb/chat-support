@@ -1,0 +1,68 @@
+<?php
+
+namespace App\Http\Requests\Admin\SupportAdmin;
+
+use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Support\Facades\Config;
+use Illuminate\Support\Facades\Gate;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Validation\Rule;
+use Auth;
+class UpdateAdminUser extends FormRequest
+{
+    /**
+     * Determine if the user is authorized to make this request.
+     *
+     * @return bool
+     */
+    public function authorize()
+    {
+        return Gate::allows(Auth::user()->load('roles')['roles'][0]['guard_name'].'.support-admin.edit', $this->adminUser);
+    }
+
+    /**
+     * Get the validation rules that apply to the request.
+     *
+     * @return array
+     */
+    public function rules(): array
+    {
+        $rules = [
+            'first_name' => ['nullable', 'string'],
+            'last_name' => ['nullable', 'string'],
+            'email' => ['sometimes', 'email', Rule::unique('support_admins', 'email')->ignore($this->adminUser->getKey(), $this->adminUser->getKeyName()), 'string'],
+            'password' => ['sometimes', 'confirmed', 'min:7', 'regex:/^.*(?=.{3,})(?=.*[a-zA-Z])(?=.*[0-9]).*$/', 'string'],
+            'forbidden' => ['sometimes', 'boolean'],
+            'language' => ['sometimes', 'string'],
+            'department' => ['sometimes'],
+            'roles' => ['sometimes', 'array'],
+
+        ];
+
+        if (Config::get('support-auth.activation_enabled')) {
+            $rules['activated'] = ['required', 'boolean'];
+        }
+
+        return $rules;
+    }
+
+    /**
+     * Modify input data
+     *
+     * @return array
+     */
+    public function getModifiedData(): array
+    {
+        $data = $this->only(collect($this->rules())->keys()->all());
+        if (!Config::get('support-auth.activation_enabled')) {
+            $data['activated'] = true;
+        }
+        if (array_key_exists('password', $data) && empty($data['password'])) {
+            unset($data['password']);
+        }
+        if (!empty($data['password'])) {
+            $data['password'] = Hash::make($data['password']);
+        }
+        return $data;
+    }
+}

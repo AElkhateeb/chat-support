@@ -1,0 +1,17 @@
+img
+name
+body
+date
+time
+
+
+message
+	 'client_id' => ,
+	 'client_type' => ,
+	 'client_name' => ,
+	 'body' => ,
+	 'dir' => ,
+	 'sender_id' => ,
+	 'sender_type' => ,
+	 'sender_name' => ,
+	 'chat_id' =>

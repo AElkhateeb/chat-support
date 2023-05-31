@@ -1,0 +1,53 @@
+curl 'https://api.twilio.com/2010-04-01/Accounts/ACdb032d2d0914cdf29a30f032a0b11ef5/Messages.json' -X POST \
+--data-urlencode 'To=whatsapp:+201015409205' \
+--data-urlencode 'From=whatsapp:+14155238886' \
+--data-urlencode 'Body=Your appointment is coming up on July 21 at 3PM' \
+-u ACdb032d2d0914cdf29a30f032a0b11ef5:[Redacted]
+
+
+
+
+
+{
+    "sid": "SM9cd1c0143e194192a815f1f5aeafe6e0",
+    "date_created": "Thu, 17 Feb 2022 11:46:27 +0000",
+    "date_updated": "Thu, 17 Feb 2022 11:46:27 +0000",
+    "date_sent": null,
+    "account_sid": "ACdb032d2d0914cdf29a30f032a0b11ef5",
+    "to": "whatsapp:+201015409205",
+    "from": "whatsapp:+14155238886",
+    "messaging_service_sid": null,
+    "body": "Your appointment is coming up on July 21 at 3PM",
+    "status": "queued",
+    "num_segments": "1",
+    "num_media": "0",
+    "direction": "outbound-api",
+    "api_version": "2010-04-01",
+    "price": null,
+    "price_unit": null,
+    "error_code": null,
+    "error_message": null,
+    "uri": "/2010-04-01/Accounts/ACdb032d2d0914cdf29a30f032a0b11ef5/Messages/SM9cd1c0143e194192a815f1f5aeafe6e0.json",
+    "subresource_uris": {
+        "media": "/2010-04-01/Accounts/ACdb032d2d0914cdf29a30f032a0b11ef5/Messages/SM9cd1c0143e194192a815f1f5aeafe6e0/Media.json"
+    }
+}
+
+
+
+
+Message: 
+pop 
+
+To: 
+whatsapp:+14155238886
+
+From: 
+whatsapp:+201015409205
+
+
+https://chatsupport.recovery-eg.store/api/chat-bot
+https://chatsupport.recovery-eg.store/api/call-back
+
+
+Invite your friends to your Sandbox. Ask them to send a WhatsApp message to +1 415 523 8886 with code join fence-fierce.

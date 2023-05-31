@@ -1,0 +1,14 @@
+import './admin-user';
+import './ceo-admin';
+import './supervisor-admin';
+import './support-admin';
+import './team-leader-admin';
+import './profile-edit-profile';
+import './profile-edit-password';
+import './chat';
+import './message';
+import './client';
+import './customer';
+import './boot-admin';
+import './income';
+import './reply';

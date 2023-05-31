@@ -1,0 +1,143 @@
+users
+    tables       ***
+    provider     ***
+    route        ***
+    controller   ***
+    request      ***
+    auth         ***
+    models       ***
+    config       ***
+    views        ***
+    js           ***
+
+relations
+
+
+table
+    migrate      ***
+    crud         ***
+config
+    auth         ***
+    auth-file    ***
+model
+    url          ***
+    relation     ***
+roles            ***
+auth             ***
+providers        ***
+routes           ***
+controllers      ***
+requests         ***
+layout
+views            ***
+js               ***
+
+
+model       url      relation   roles    auth    providers     routes       controllers    requests    layout    views    js
+                                    \Ceo\A                              'ceo                                  ceo
+                                    'ceo-                               Ceo
+                                    'ceo.
+
+
+migrate
+
+    rate
+
+
+
+
+
+
+
+
+income data
+income model
+bootAdmin model
+
+
+incomes form
+replays form
+admin boot form
+
+
+add some data
+
+users
+    support
+    sales
+//  supervisor
+//  teamledar
+    ceo
+
+create tables
+        department
+        user-admin lastloogin                   ***
+            support                             ***
+            ceo                                 ***
+        user-activations                        ***
+            support                             ***
+            ceo                                 ***
+        user-password_resets                    ***
+            support                             ***
+            ceo                                 ***       
+        user-fill_defaults_permissions_ceo_for users ***
+            support                             ***
+            ceo                                 ***    
+        user-fill_permissions_ceo_for users     ***   
+            support                             ***
+            ceo                                 ***
+        user-fill_permissions_chats             ***
+            support                             ***
+            ceo                                 ***
+        user-fill_permissions_massages          ***
+            support                             ***
+            ceo                                 ***
+        user-fill_permissions_bootadmin         ***
+            support                             ***
+            ceo                                 ***
+        user-fill_permissions_incomes           ***
+            support                             ***
+            ceo                                 ***
+        user-fill_permissions_replies           ***
+            support                             ***
+            ceo                                 ***
+config auth-file                                ***
+models                                          ***
+routes                                          ***
+requests                                        ***
+controllers                                     ***                                   
+views       
+ layout                                         ***                                     
+ admin                                          ***
+ all                                            ***
+ js                                             ***
+providers                                       ***
+
+support admin department 
+        model                                   ***
+        controlar
+        request
+        viwe
+            form 
+            js
+
+controlar 
+    chat supoort
+    chat seals
+    boot admin edit and create
+
+
+
+
+chat supoort
+    copy file
+    controllers                                     ***                                   
+    views       
+    layout 
+
+
+ migraation
+2021_10_01_062438_fill_ceo_permissions_for_slider
+
+
+
